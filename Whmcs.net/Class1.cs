@@ -6,9 +6,11 @@ namespace Whmcs.net
     {
         public void t()
         {
-            ServiceObject s = new ServiceObject("http://www.whmcs.com/api.php", WhmcsActions.GetClients,"hey hey","password");
+            ServiceObject s = new ServiceObject("http://www.whmcs.com/api.php", WhmcsActions.GetClients,"username","password");
 
-            
+            s.PostData.Add("key","Data");
+            s.PostData.Add("key", "Data");
+            s.PostData.Add("key", "Data");
 
         }
 
