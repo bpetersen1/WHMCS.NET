@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Whmcs.net.WhmcsServices
 {
-    public class ServiceObject
+    public class WhmcsServiceObject
     {
-        public ServiceObject(string whmcsApiUrl,string action,string userName, string password)
+        public WhmcsServiceObject(string whmcsApiUrl,string action,string userName, string password)
         {
             PostData = new NameValueCollection();
             Action = action;

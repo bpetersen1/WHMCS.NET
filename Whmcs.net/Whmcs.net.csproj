@@ -41,10 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="HttpService\WhmcsApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Password.cs" />
     <Compile Include="WhmcsServices\WhmcsActions.cs" />
-    <Compile Include="WhmcsServices\ServiceObject.cs" />
+    <Compile Include="WhmcsServices\WhmcsExecuteAction.cs" />
+    <Compile Include="WhmcsServices\WhmcsServiceObject.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
