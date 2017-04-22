@@ -23,7 +23,7 @@ namespace Whmcs.Net_Tests
         public void Test_GetClients()
         {
            WhmcsServiceObject s = new WhmcsServiceObject(Credentials.WhmcsApiUrl, WhmcsActions.GetClients, Credentials.Username, Credentials.Password);
-           // s.PostData.Add("search", "gphosting.co.za");
+           // s.PostData.Add("search", "heyhey.co.za");
             string result = new WhmcsExecuteAction().ExecuteAction(s);
             Console.WriteLine(result);
             Assert.IsTrue(!string.IsNullOrEmpty(result));
