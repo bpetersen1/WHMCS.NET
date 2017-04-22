@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Whmcs.net.Security;
 using Whmcs.net.WhmcsServices;

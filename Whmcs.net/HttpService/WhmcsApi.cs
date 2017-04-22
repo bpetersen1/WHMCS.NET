@@ -1,7 +1,6 @@
 ﻿using System.Collections.Specialized;
 using System.Net;
 using System.Text;
-using Whmcs.net.WhmcsServices;
 
 namespace Whmcs.net.HttpService
 {
