@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Whmcs.net;
 using Whmcs.net.Security;
 using Whmcs.net.WhmcsServices;
+using Whmcs.Net_Tests.TestConfigs;
 
 namespace Whmcs.Net_Tests
 {
@@ -21,9 +22,10 @@ namespace Whmcs.Net_Tests
         [TestMethod]
         public void Test_GetClients()
         {
-            WhmcsServiceObject s = new WhmcsServiceObject("https://www.whmcssite.co.za/includes/api.php", WhmcsActions.GetInvoices, "username", "password");
-            s.PostData.Add("userid", "5");
+           WhmcsServiceObject s = new WhmcsServiceObject(Credentials.WhmcsApiUrl, WhmcsActions.GetClients, Credentials.Username, Credentials.Password);
+           // s.PostData.Add("search", "gphosting.co.za");
             string result = new WhmcsExecuteAction().ExecuteAction(s);
+            Console.WriteLine(result);
             Assert.IsTrue(!string.IsNullOrEmpty(result));
 
         }

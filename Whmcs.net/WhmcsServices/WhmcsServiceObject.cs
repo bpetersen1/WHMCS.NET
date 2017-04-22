@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Specialized;
 namespace Whmcs.net.WhmcsServices
 {
     public class WhmcsServiceObject
@@ -21,6 +12,16 @@ namespace Whmcs.net.WhmcsServices
             Password = password;
         }
 
+        public WhmcsServiceObject(string whmcsApiUrl, string action, string userName, string password,string accessKey)
+        {
+            PostData = new NameValueCollection();
+            Action = action;
+            Username = userName;
+            WhmcsApiUrl = whmcsApiUrl;
+            Password = password;
+            AccessKey = accessKey;
+        }
+
         public string Action { get; private set; }
 
         public string Username { get; private set; }
@@ -28,6 +29,8 @@ namespace Whmcs.net.WhmcsServices
         public string Password { get; private set; }
 
         public string WhmcsApiUrl { get; private set; }
+
+        public string AccessKey { get; private set; }
 
         public NameValueCollection PostData { get; set; }
 

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Specialized;
 using Whmcs.net.HttpService;
 
 namespace Whmcs.net.WhmcsServices
@@ -16,8 +11,9 @@ namespace Whmcs.net.WhmcsServices
             NameValueCollection apidata = data.PostData;
             apidata.Add("action",data.Action);
             apidata.Add("username",data.Username);
-            apidata.Add("password",pass);
+            apidata.Add("password", pass);
             apidata.Add("responsetype", "json");
+            if(!string.IsNullOrEmpty(data.AccessKey)) apidata.Add("accesskey", data.AccessKey);
             string result = new WhmcsApi().CallWhmcsApi(data.WhmcsApiUrl, apidata);
             return result;
         }

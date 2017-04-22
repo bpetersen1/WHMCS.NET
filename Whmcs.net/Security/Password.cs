@@ -14,7 +14,7 @@ namespace Whmcs.net.Security
                 byte[] utfencodedPassword = UtfEncodePassword(password);
                 hashedPassword = BitConverter.ToString(md5.ComputeHash(utfencodedPassword)).Replace("-",string.Empty);
             }
-            return hashedPassword;
+            return hashedPassword.ToLower();
         }
 
         private byte[] UtfEncodePassword(string password)
