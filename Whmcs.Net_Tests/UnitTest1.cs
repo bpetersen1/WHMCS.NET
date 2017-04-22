@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Whmcs.net;
 using Whmcs.net.Security;
 using Whmcs.net.WhmcsServices;
 using Whmcs.Net_Tests.TestConfigs;
@@ -27,6 +28,9 @@ namespace Whmcs.Net_Tests
             Console.WriteLine(result);
             Assert.IsTrue(!string.IsNullOrEmpty(result));
 
+            string result2 = Api.GetClients(null ,null, "gabcom");
+
+            Assert.IsTrue(!string.IsNullOrEmpty(result2));
         }
     }
 }
