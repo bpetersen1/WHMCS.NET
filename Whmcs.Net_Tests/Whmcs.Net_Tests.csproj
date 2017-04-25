@@ -60,6 +60,9 @@
       <Name>Whmcs.net</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Devops\production.bat" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
